@@ -2,7 +2,7 @@
   <ul>
     @for (ticket of tickets; track $index) {
     <li>
-      <app-ticket [data]="ticket" />
+      <app-ticket [data]="ticket" (colse)="onCloseTiket(ticket.id)" />
     </li>
     } @empty {
     <p>No tickets available.</p>
